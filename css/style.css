@@ -21,7 +21,8 @@ a {
     padding: 0 20px;
 }
 
-/* Hlavička */
+
+/* HLAVIČKA */
 
 .header {
     position: sticky;
@@ -60,7 +61,8 @@ a {
     color: #0a7ea4;
 }
 
-/* Hero */
+
+/* HERO */
 
 .hero {
     position: relative;
@@ -98,7 +100,8 @@ a {
     margin-bottom: 32px;
 }
 
-/* Tlačítka */
+
+/* TLAČÍTKA */
 
 .btn {
     display: inline-block;
@@ -116,6 +119,7 @@ a {
 .btn-primary {
     background-color: #ff7a45;
     color: #ffffff;
+    box-shadow: 0 4px 14px rgba(255, 122, 69, 0.35);
 }
 
 .btn-primary:hover {
@@ -133,13 +137,21 @@ a {
     background-color: #086683;
 }
 
-/* Úvod */
+
+/* ÚVOD */
 
 .intro {
     padding: 50px 20px 10px;
 }
 
-/* Destinace */
+.intro-text {
+    font-size: 18px;
+    color: #555555;
+    text-align: center;
+}
+
+
+/* DESTINACE */
 
 .destinations {
     padding: 50px 20px 80px;
@@ -150,9 +162,6 @@ a {
     font-weight: 700;
     text-align: center;
     margin-bottom: 40px;
-}
-
-.destination-title {
     color: #000000;
 }
 
@@ -222,7 +231,8 @@ a {
     font-size: 15px;
 }
 
-/* O nás */
+
+/* O NÁS */
 
 .about {
     background-color: #f2f8fb;
@@ -242,9 +252,6 @@ a {
 .about-title {
     font-size: 36px;
     margin-bottom: 20px;
-}
-
-.about-title {
     color: #000000;
 }
 
@@ -277,7 +284,8 @@ a {
     color: #666666;
 }
 
-/* Kontakt */
+
+/* KONTAKT */
 
 .contact {
     padding: 80px 20px;
@@ -287,9 +295,6 @@ a {
     font-size: 36px;
     margin-bottom: 30px;
     text-align: center;
-}
-
-.contact-title {
     color: #000000;
 }
 
@@ -301,6 +306,11 @@ a {
 
 .contact-info p {
     margin-bottom: 12px;
+}
+
+.opening-hours {
+    font-size: 14px;
+    color: #777777;
 }
 
 .contact-form {
@@ -339,28 +349,33 @@ a {
     font-weight: 600;
 }
 
-/* Newsletter */
 
-.newsletter-box {
-    margin: 40px auto;
-    padding: 30px;
-    max-width: 600px;
-    background-color: #0a7ea4;
+/* PATIČKA */
+
+.footer {
+    background-color: #1d2b36;
     color: #ffffff;
-    border-radius: 12px;
-    text-align: center;
+    padding: 30px 0;
 }
 
-.newsletter-box input {
-    padding: 10px;
-    width: 70%;
-    border: none;
-    border-radius: 6px;
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* Responzivita */
+.footer-note {
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+
+/* MOBIL */
 
 @media (max-width: 800px) {
+
     .hero {
         height: 450px;
     }

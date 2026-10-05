@@ -1,32 +1,35 @@
-var animationSpeed = 300;
+const buttons = document.querySelectorAll(".offer-btn");
 
-function formatPrice(price) {
-    return price.toLocaleString("cs-CZ") + " Kč";
-}
+buttons.forEach(function (button) {
 
-document.addEventListener("DOMContentLoaded", function () {
-    var offerButtons = document.querySelectorAll(".offer-btn");
+    button.addEventListener("click", function () {
 
-    offerButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            var offer = document.getElementById(button.dataset.target);
-            var isOpen = offer.classList.toggle("open");
+        const target = button.dataset.target;
+        const offer = document.getElementById(target);
 
-            if (isOpen) {
-                button.textContent = "Skrýt nabídku";
-            } else {
-                button.textContent = "Zobrazit nabídku";
-            }
-        });
+        offer.classList.toggle("open");
+
+        if (offer.classList.contains("open")) {
+            button.textContent = "Skrýt nabídku";
+        } else {
+            button.textContent = "Zobrazit nabídku";
+        }
+
     });
 
-    var form = document.getElementById("contact-form");
-    var formMessage = document.getElementById("form-message");
+});
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        var name = document.getElementById("name").value;
-        formMessage.textContent = "Děkujeme, " + name + "! Ozveme se vám do 24 hodin.";
-        form.reset();
-    });
+
+const form = document.getElementById("contact-form");
+const message = document.getElementById("form-message");
+
+form.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    message.textContent =
+        "Děkujeme za zprávu. Brzy se vám ozveme.";
+
+    form.reset();
+
 });
